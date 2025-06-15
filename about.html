@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Aureviaa</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Additional styles specific to the About page */
+        .about-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .about-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .about-hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .about-section {
+            padding: 60px 0;
+        }
+        
+        .about-section:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+        
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        .about-content p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            color: #333;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #000;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #0074DB;
+            margin: 15px auto 0;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .value-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .value-card i {
+            font-size: 2.5rem;
+            color: #0074DB;
+            margin-bottom: 20px;
+        }
+        
+        .value-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #000;
+        }
+        
+        .value-card p {
+            color: #555;
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+        
+        .mission-vision {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .mission-card, .vision-card {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .mission-card h3, .vision-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #000;
+        }
+        
+        .mission-card p, .vision-card p {
+            color: #555;
+            margin-bottom: 0;
+        }
+        
+        .join-us {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .join-us h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .join-us p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-hero p {
+                font-size: 1.2rem;
+            }
+            
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .mission-vision {
+                grid-template-columns: 1fr;
+            }
+            
+            .mission-card, .vision-card {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+        <div class="container">
+            <div class="top-nav-left">
+                <a href="#">For Consumer</a>
+                <a href="#">For Business</a>
+            </div>
+            <div class="top-nav-right">
+                <a href="#">Shop</a>
+                <a href="#">Support</a>
+                <a href="#">Sign in</a>
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Navigation Bar -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="https://www.samsung.com/etc.clientlibs/samsung/clientlibs/consumer/global/clientlib-common/resources/images/gnb-desktop-120x32.png" alt="Aureviaa Logo"></a>
+            </div>
+            <div class="main-nav-menu">
+                <ul>
+                    <li class="dropdown">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="about.html">About Us</a>
+                    </li>
+                    <!-- <li class="dropdown">
+                        <a href="#">Products</a>
+                        <div class="dropdown-content">
+                            <div class="dropdown-column">
+                                <h4>Wellness Products</h4>
+                                <a href="#">Organic Supplements</a>
+                                <a href="#">Natural Remedies</a>
+                                <a href="#">Essential Oils</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4>Body Care</h4>
+                                <a href="#">Natural Skincare</a>
+                                <a href="#">Hair Products</a>
+                                <a href="#">Body Essentials</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4>Spiritual Items</h4>
+                                <a href="#">Meditation Tools</a>
+                                <a href="#">Yoga Accessories</a>
+                                <a href="#">Books & Guides</a>
+                            </div>
+                        </div>
+                    </li> -->
+                    <li class="dropdown">
+                        <a href="#">Services</a>
+                         <div class="dropdown-content">
+                            <div class="dropdown-column">
+                                <!-- <h4>Heath and wellness</h4> -->
+                               <h4> <a href="health-wellness.html">Health and wellness</a></h4>
+                                <h4> <a href="#">Home & Lifestyle</a></h4>
+                                <h4> <a href="#">Organic Farming & Food</a></h4>     
+                                <h4> <a href="#">Furniture</a></h4> 
+                                <h4> <a href="#">Electronics</a></h4> 
+                            
+                            </div>
+                            <!-- <div class="dropdown-column">
+                                <h4>Body Care</h4>
+                                <a href="#">Natural Skincare</a>
+                                <a href="#">Hair Products</a>
+                                <a href="#">Body Essentials</a>
+                            </div> -->
+                            <!-- <div class="dropdown-column">
+                                <h4>Spiritual Items</h4>
+                                <a href="#">Meditation Tools</a>
+                                <a href="#">Yoga Accessories</a>
+                                <a href="#">Books & Guides</a>
+                            </div> -->
+                        </div>
+                    </li>
+                    <!-- <li class="dropdown">
+                        <a href="#">Blog</a>
+                    </li> -->
+                    <li class="dropdown">
+                        <a href="contact_us.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>About Us – Aureviaa</h1>
+            <p>Redefining holistic living through innovation, authenticity, and purpose-driven excellence</p>
+        </div>
+    </section>
+
+    <!-- About Introduction Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <p>At Aureviaa, we are committed to redefining the standards of holistic living through innovation, authenticity, and purpose-driven excellence. Established with a clear vision to empower individuals and organizations alike, Aureviaa operates at the intersection of health and wellness, conscious lifestyle, organic living, and transformative growth—both personal and professional.</p>
+                
+                <p>We integrate ancient wisdom with cutting-edge science, offering a curated suite of products and services that are both deeply rooted in tradition and aligned with the evolving needs of a modern world. Our diverse portfolio spans organic wellness products, natural body care, spiritual development, business advisory, and experiential learning platforms—all designed to uplift lives and foster sustainable success.</p>
+                
+                <p>Aureviaa is not just a brand—it is a movement. A movement dedicated to elevating consciousness, enabling purposeful prosperity, and fostering a thriving ecosystem where individuals, communities, and the environment flourish in harmony.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="about-section">
+        <div class="container">
+             <h2 class="section-title">Our Mission & Vision</h2>
+            <div class="mission-vision">
+                <div class="mission-card">
+                    <i class="fas fa-bullseye" style="font-size: 3rem; color: #0074DB; margin-bottom: 20px;"></i>
+                    <h3>Our Mission</h3>
+                    <p>To create impactful, sustainable, and intelligent solutions that elevate the human experience across physical, emotional, and entrepreneurial dimensions.</p>
+                </div>
+                <div class="vision-card">
+                    <i class="fas fa-eye" style="font-size: 3rem; color: #0074DB; margin-bottom: 20px;"></i>
+                    <h3>Our Vision</h3>
+                    <p>To be a global catalyst for conscious transformation—where wellness, wisdom, and enterprise converge to shape a better world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission and Vision Section -->
+    <section class="about-section">
+        <div class="container">
+           
+<h2 class="section-title">Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>Integrity</h3>
+                    <p>We uphold honesty, transparency, and ethical responsibility in every decision, action, and relationship.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Innovation</h3>
+                    <p>We continuously evolve by integrating modern science with timeless wisdom to create meaningful, future-ready solutions.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Sustainability</h3>
+                    <p>We are deeply committed to environmental, social, and economic sustainability in all aspects of our operations and offerings.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-hands-helping"></i>
+                    <h3>Empowerment</h3>
+                    <p>We foster growth by equipping individuals and organizations with the tools, knowledge, and confidence to thrive.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-award"></i>
+                    <h3>Excellence</h3>
+                    <p>We pursue excellence in everything we do—ensuring that quality, impact, and customer satisfaction are never compromised.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Us Section -->
+    <section class="join-us">
+        <div class="container">
+            <h2>Join Our Movement</h2>
+            <p>Join us in shaping a future where innovation meets intention, and where growth is not just measured in numbers, but in lives uplifted.</p>
+            <a href="#" class="btn btn-outline">Get Involved</a>
+        </div>
+    </section>
+
+    <!-- Feedback Button -->
+    <div class="support-buttons">
+        <button id="feedback-button" class="support-button feedback-btn">
+            <i class="fas fa-comment-alt"></i>
+            <span>Feedback</span>
+        </button>
+    </div>
+
+    <!-- Chat with Experts Button -->
+    <div class="chat-button-container">
+        <button id="chat-with-experts-button" class="chat-button">
+            <i class="fas fa-comments"></i>
+            <span>Chat with Experts</span>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-column">
+                    <h4>Products & Services</h4>
+                    <ul>
+                        <li><a href="#">Wellness Products</a></li>
+                        <li><a href="#">Natural Body Care</a></li>
+                        <li><a href="#">Spiritual Development</a></li>
+                        <li><a href="#">Business Advisory</a></li>
+                        <li><a href="#">Learning Platforms</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                        <li><a href="#">Special Offers</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                        <li><a href="#">Wholesale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact_us.html">Contact Us</a></li>
+                        <li>
+                <a
+                  href="https://chat.whatsapp.com/JjOZwKzcoFK7S5zY9alody"
+                  target="_blank">
+                  <i class="fab fa-whatsapp"></i> Join Our WhatsApp Group
+                </a>
+              </li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#" id="footer-chat-link">Live Chat</a></li>
+                        <li><a href="#">Email Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Account & Community</h4>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Loyalty Program</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Aureviaa Experience</a></li>
+                        <li><a href="#">Membership</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Sustainability</h4>
+                    <ul>
+                        <li><a href="#">Environment</a></li>
+                        <li><a href="#">Ethics & Privacy</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                        <li><a href="#">Diversity & Inclusion</a></li>
+                        <li><a href="#">Corporate Citizenship</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="footer-info">
+                    <p>© 2023 Aureviaa. All rights reserved.</p>
+                    <div class="footer-links">
+                        <a href="#">Privacy</a>
+                        <a href="#">Legal</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Feedback Modal -->
+    <div id="feedback-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>We Value Your Feedback</h2>
+                <span class="modal-close" id="close-feedback-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="feedback-container">
+                    <div class="feedback-info">
+                        <h3>How can we help you?</h3>
+                        <p>Your feedback is important to us. Please share your thoughts, suggestions, or concerns with Aureviaa. Our team is always working to improve your experience.</p>
+                        <div class="feedback-contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <p>1-800-AUREVIAA</p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c8bbbdb8b8a7babc88a9bdbaadbea1a9a9e6aba7a5">[email&#160;protected]</a></p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-comments"></i>
+                                <p>Chat with us (9 AM - 9 PM, 7 days a week)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feedback-form">
+                        <form id="aureviaa-feedback-form">
+                            <div class="form-group">
+                                <label for="feedback-name">Name</label>
+                                <input type="text" id="feedback-name" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="feedback-email">Email Address</label>
+                                <input type="email" id="feedback-email" placeholder="Enter your email address" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="feedback-phone">Phone Number</label>
+                                <input type="tel" id="feedback-phone" placeholder="Enter your phone number">
+                            </div>
+                            <div class="form-group">
+                                <label for="feedback-subject">Subject</label>
+                                <select id="feedback-subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="product_inquiry">Product Inquiry</option>
+                                    <option value="service_feedback">Service Feedback</option>
+                                    <option value="website_feedback">Website Feedback</option>
+                                    <option value="complaint">Complaint</option>
+                                    <option value="suggestion">Suggestion</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="feedback-message">Message</label>
+                                <textarea id="feedback-message" rows="5" placeholder="Please enter your message here..." required></textarea>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="feedback-terms" required>
+                                <label for="feedback-terms">I agree to Aureviaa's <a href="#">Privacy Policy</a> and consent to the processing of my personal information.</label>
+                            </div>
+                            <div class="form-submit">
+                                <button type="submit" class="btn btn-primary" id="feedback-submit">Submit Feedback</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat with Experts Modal -->
+    <div id="chat-modal" class="modal chat-modal">
+        <div class="modal-content chat-modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-comments"></i> Chat with Aureviaa Experts</h2>
+                <span class="modal-close" id="close-chat-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="chat-container">
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="message received">
+                            <div class="message-avatar">
+                                <img src="https://www.samsung.com/etc.clientlibs/samsung/clientlibs/consumer/global/clientlib-common/resources/images/gnb-desktop-120x32.png" alt="Aureviaa Support">
+                            </div>
+                            <div class="message-content">
+                                <p class="message-sender">Aureviaa Support</p>
+                                <p class="message-text">Hello! Welcome to Aureviaa Support. How can we assist you on your wellness journey today?</p>
+                                <span class="message-time">Now</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quick-responses">
+                        <button class="quick-response-btn" data-response="I'd like to learn more about your wellness products">I'd like to learn more about your wellness products</button>
+                        <button class="quick-response-btn" data-response="I have questions about holistic living">I have questions about holistic living</button>
+                        <button class="quick-response-btn" data-response="Tell me about your business advisory services">Tell me about your business advisory services</button>
+                    </div>
+                    <div class="chat-input">
+                        <textarea id="chat-message-input" placeholder="Type your message here..."></textarea>
+                        <button id="send-chat-message" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Notice -->
+    <div class="cookie-notice" id="cookie-notice">
+        <div class="container">
+            <p>We use cookies to customize your experience and improve our site. For more information, please refer to our <a href="#">Privacy Policy</a>.</p>
+            <div class="cookie-buttons">
+                <button class="btn btn-secondary" id="cookie-settings">Cookie Settings</button>
+                <button class="btn btn-primary" id="cookie-accept">Accept All</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay for modals -->
+    <div id="modal-overlay" class="modal-overlay"></div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
+</body>
+</html>
