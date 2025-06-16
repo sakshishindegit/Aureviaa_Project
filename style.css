@@ -167,11 +167,14 @@ img {
     font-weight: 600;
     color: #000;
     display: block;
+    text-decoration: none;
+
 }
 
 .main-nav-menu a:hover {
     color: #0074DB;
 }
+
 
 /* Dropdown Menu */
 .dropdown {
@@ -214,11 +217,13 @@ img {
     padding: 8px 0;
     color: #555;
     font-weight: 400;
+
 }
 
 .dropdown-column a:hover {
     color: #0074DB;
 }
+
 
 /* Hero Section */
 .hero {
@@ -288,17 +293,21 @@ img {
 }
 
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: nowrap; /* prevent wrapping */
     gap: 20px;
+    overflow-x: auto;  /* allows horizontal scroll if needed */
+    padding-bottom: 10px;
 }
 
 .product-card {
-    background-color: #fff;
+    min-width: 220px; /* adjust width as per design */
+    flex: 0 0 auto;   /* prevent resizing */
+    background: #fff;
     border-radius: 10px;
-    padding: 20px;
+    padding: 15px;  
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .product-card:hover {
