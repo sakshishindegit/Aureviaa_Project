@@ -1,181 +1,117 @@
-/* Global Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-body {
-    font-family: 'SamsungOne', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #000;
-    background-color: #fff;
-    overflow-x: hidden;
+body, html {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  background: black;
 }
 
-.container {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 16px;
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  /* background: rgba(0, 0, 0, 0.3); */
+  color: white;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+.logo {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-ul {
-    list-style: none;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
 }
 
-/* Button Styles */
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    border-radius: 20px;
-    font-weight: 600;
-    text-align: center;
-    transition: all 0.3s ease;
-    margin-right: 10px;
-    cursor: pointer;
+.nav-links li a:hover {
+  color: #00c3ff;
 }
 
-.btn-primary {
-    background-color: #0074DB;
-    color: white;
-    border: none;
+.video-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
 }
 
-.btn-primary:hover {
-    background-color: #0066c0;
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: fade 25s infinite;
 }
 
-.btn-secondary {
-    background-color: transparent;
-    color: #000;
-    border: 1px solid #000;
+.bg-video:nth-child(1) { animation-delay: 3s; }
+.bg-video:nth-child(2) { animation-delay: 5s; }
+.bg-video:nth-child(3) { animation-delay: 10s; }
+.bg-video:nth-child(4) { animation-delay: 15s; }
+.bg-video:nth-child(5) { animation-delay: 20s; }
+
+@keyframes fade {
+  0%, 100% { opacity: 0; }
+  10%, 50% { opacity: 1; }
+  60%, 90% { opacity: 0; }
 }
 
-.btn-secondary:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+.content {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 100;
 }
 
-.btn-link {
-    color: #0074DB;
-    text-decoration: none;
-    position: relative;
-    font-weight: 600;
+.content h1 {
+  font-size: 52px;
+  margin-bottom: 15px;
 }
 
-.btn-link:after {
-    content: '>';
-    margin-left: 5px;
+.content p {
+  font-size: 24px;
+  margin-bottom: 25px;
 }
 
-.btn-outline {
-    border: 1px solid #fff;
-    color: #fff;
-    background: transparent;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-weight: 600;
-    display: inline-block;
-    transition: all 0.3s ease;
+.content button {
+  background: white;
+  color: black;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.btn-outline:hover {
-    background: rgba(255, 255, 255, 0.2);
+.content button:hover {
+  background: #00c3ff;
+  color: white;
 }
-
-/* Section Title */
-.section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 40px;
-    color: #000;
-}
-
-/* Top Navigation */
-.top-nav {
-    background-color: #fff;
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
-    font-size: 0.9rem;
-}
-
-.top-nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.top-nav-left a,
-.top-nav-right a {
-    margin: 0 15px;
-    color: #555;
-    transition: color 0.3s ease;
-}
-
-.top-nav-left a:first-child,
-.top-nav-right a:first-child {
-    margin-left: 0;
-}
-
-.top-nav-left a:hover,
-.top-nav-right a:hover {
-    color: #0074DB;
-}
-
-/* Main Navigation */
-.main-nav {
-    background-color: #fff;
-    padding: 10px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.main-nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo img {
-    height: 32px;
-}
-
-.main-nav-menu ul {
-    display: flex;
-}
-
-.main-nav-menu li {
-    position: relative;
-    margin: 0 15px;
-}
-
-.main-nav-menu a {
-    padding: 15px 0;
-    font-weight: 600;
-    color: #000;
-    display: block;
-    text-decoration: none;
-
-}
-
-.main-nav-menu a:hover {
-    color: #0074DB;
-}
-
-
 /* Dropdown Menu */
 .dropdown {
     position: relative;
@@ -183,17 +119,19 @@ img {
 
 .dropdown-content {
     position: absolute;
-    left: -20px;
-    background-color: #fff;
-    min-width: 700px;
+    color: #000;
+    top: 20px;
+    right: 100%; 
+    /* background-color: #fff; */
+    min-width: 250px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    display: none;
     z-index: 100;
     display: flex;
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
+    flex-direction: column;
 }
 
 .dropdown:hover .dropdown-content {
@@ -1235,3 +1173,70 @@ footer {
     flex: 1 1 100%;
   }
 }
+
+.section-title {
+  text-align: center;
+  padding: 40px 0 0 0;
+}
+.appliance-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  padding: 60px 40px;
+  justify-items: center;
+  background: #f9f9f9;
+}
+
+/* Make title span all columns */
+.section-title {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-title h1 {
+  font-size: 36px;
+  color: #222;
+  font-weight: bold;
+}
+
+    .appliance-card {
+      background: #fff;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .appliance-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .appliance-card h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .appliance-card img {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+      margin-bottom: 20px;
+    }
+/* 
+.buy-btn {
+  padding: 10px 22px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.buy-btn:hover {
+  background: #00c3ff;
+} */
